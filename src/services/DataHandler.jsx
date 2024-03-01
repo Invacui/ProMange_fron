@@ -48,7 +48,7 @@ try{
 };
 
 //PUT REQ
-export const DataUpdater = async (formData,refetch,setRefetch) => {
+export const DataUpdater = async ({formData,refetch,setRefetch}) => {
   const loadingToastId = toast.loading("Please wait...", {
     position: "bottom-center",
     theme: "dark"
@@ -69,7 +69,7 @@ export const DataUpdater = async (formData,refetch,setRefetch) => {
       console.log("Data Updated Successfully ::", UserInfo.Message);
       toast.dismiss(loadingToastId);  
       showToast(UserInfo.Message, "success");
-      setRefetch(!refetch);
+      //setRefetch(!refetch);
     } else {
       const data = await response.json();
       throw new Error(data.Error);

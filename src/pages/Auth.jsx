@@ -47,7 +47,11 @@ const Auth = () => {
       "POST",
       formData,
       );
-      handleNavigate();  
+      if(captured_data){
+      handleNavigate();
+    }else{
+      
+    }  
     };
   return(
     <div className="auth_mainbody">

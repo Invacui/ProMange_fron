@@ -29,21 +29,42 @@ const handleInputChange = (e) => {
     setFormData(newFormData);
   }
 }; 
+const handleUpdateSuccess = () =>{
+
+}
 const handleAuthSubmit = async (e) => {
   e.preventDefault();
-  console.log("BEFORE SENDING___>>>", formData);
-  if (!((formData.oldpassword === "") ^ (formData.newpassword === ""))) {
-    if (!(formData.oldpassword && formData.newpassword)) {
-      DataUpdater(formData,refetch,setRefetch);
-    } else {
-      showToast(
-        "Please fill out both old password and new password fields.",
-        "error"
-      );
-    }
-  } else {
-    DataUpdater(formData);
-  }
+ 
+    try {
+        if (formData.name && formData.newpassword && formData.oldpassword) {
+            DataUpdater({formData, handleUpdateSuccess});
+            showToast("Data Updated Successfully","success");
+        } else if (formData.name && formData.newpassword && !formData.oldpassword) {
+            throw new Error("Old password missing");
+        } else if (formData.name && !formData.newpassword && formData.oldpassword) {
+            throw new Error("New password fields is required");
+        } else if (formData.name && !formData.newpassword && !formData.oldpassword) {
+            DataUpdater({formData, handleUpdateSuccess});
+            showToast("Data Updated Successfully","success");
+        } else if (!formData.name && formData.newpassword && formData.oldpassword) {
+            DataUpdater({formData, handleUpdateSuccess});
+            showToast("Data Updated Successfully","success");
+        } else if (!formData.name && formData.newpassword && !formData.oldpassword) {
+            throw new Error("Old password fields is required");
+        } else if (!formData.name && !formData.newpassword && formData.oldpassword) {
+            throw new Error("New password fields is required");
+        } 
+    } catch (error) {
+        console.log(error.message);
+        showToast(
+          error.message,
+          "error"
+        );
+    
+}
+
+
+    
 }; 
   return (
     <div className='SettingsTab_main_body'>

@@ -116,7 +116,7 @@ export const updateTaskStatus = async (taskId, newStatus) => {
       });
       try {
         if (taskId) {
-          const sharedUrl = `${BASE_URL}/data/sharedTask/${taskId}`;
+          const sharedUrl = `https://pro-mange-fron.vercel.app/data/sharedTask/${taskId}`;
           // Copy URL to clipboard
           await navigator.clipboard.writeText(sharedUrl);
           toast.dismiss(loadingToastId);
