@@ -1,0 +1,56 @@
+.content_body_main{
+    width: 100%;
+    height: fill;
+
+ }
+.content_body_sub {
+    width: 800px; /* Width of the content (exceeds the container width) */
+    height: inherit;
+    width: inherit;
+    padding: 10px;
+
+}
+
+.item {
+
+
+    border-radius: 10px;
+    height: 100%;
+    width: 350px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+    background: rgba(238, 242, 245, 1);
+}
+.Board_sub_tab_head.one{
+    display: flex;
+    margin-bottom: 10px;
+    height: min-content;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Tab_sub_tab_buttons{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    justify-content: end;
+    align-items: center;
+}
+.Board_sub_tab_head.one button{
+    margin-left: 15px;
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 0%;
+    cursor: pointer;
+}
+.Board_sub_tab_head.one img{
+    width: 20px;
+    height: 20px;
+  }
+  .Board_sub_tab_head.two{
+    flex: 1;
+    overflow-x: auto;
+}

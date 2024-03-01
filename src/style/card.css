@@ -1,0 +1,155 @@
+/* .required label:after {
+    color: #e32;
+    content: ' * ';
+    display:inline;
+} */
+.Kanban_card_box{
+    width: inherit;
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.card_heading{
+    display: flex;
+    justify-content: space-between;
+}
+.card_heading{
+    margin-bottom: 10px;
+}
+.Card_title{
+    word-break: break-all;
+    white-space: normal;
+}
+.task_priority{
+    font-size: x-small;
+    text-transform: uppercase;
+    
+}
+.task_priority::before{
+    content: ' ● ';
+    display:inline;
+    font-size: large;
+    margin-top: 2px;
+}
+.task_priority.High::before {
+color: red;
+}
+.task_priority.Low::before {
+    color: green;
+    }
+.task_priority.Medium::before {
+    color: rgb(0, 89, 255);
+    }
+.Full_task_min.minimize_full{
+    display: none;
+}
+.checklist_n_minimize{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checklist_n_minimize .minimizetwo_img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.minimizetwo_img.minimize{
+    transform: rotate(180deg);
+}
+.check_list_view{
+    margin: 15px auto;
+    
+}
+.check_list_view.minimize{
+    display: none;
+}
+.check_list_view li{
+    list-style: none;
+    display: flex;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.check_list_view li div{
+    word-break: break-all;
+    white-space: normal;
+    overflow: hidden;
+    height: auto;
+    margin-left: 10px;
+    color: grey;
+}
+.due-Date{
+    flex: 0.3 0.7;
+    font-weight: 600;
+    font-size: small;
+    color: white;
+    background-color: grey;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.switch_buttons{
+    direction: rtl;
+    flex: 0.7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.status_buttons{
+    display: flex;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.status_buttons button{
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin: 2px;
+    border: none;
+    background: rgba(238, 236, 236, 1);
+    color: rgba(118, 117, 117, 1);
+}
+
+
+.Shared_task_main_body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Kanban_card_box.shared {
+    /* border: 1px springgreen; */
+    border: 1px solid grey;
+    width: 20rem;
+    position: relative;
+}
+.switch_buttons.shared {
+    direction: ltr;
+    flex: 0.7 1;
+    display: flex;
+     justify-content: flex-start; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.switch_buttons.shared span {
+    font-size: small;
+    margin-right: 10px;
+}
+.logo_shared_task{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    
+    top: 10px;
+    left: 10px;
+}
+.logo_shared_task img{
+    margin-right: 10px;
+}

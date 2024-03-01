@@ -1,0 +1,35 @@
+.Add_task_sub_body.custom {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+width: 300px;
+height: auto;
+    padding:  1%;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Add_task_sub_body.custom h5{
+    font-size: x-small;
+    text-align: center;
+    margin: 15px 0px;
+}
+.Add_task_sub_body.custom button{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+}
+.custompopyesbtn{
+    background: rgba(23, 162, 184, 1);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.custompopcancelbtn{
+    background: transparent;
+    color: red;
+    margin: 10px 0px;
+    padding: 10px;
+    border: thin solid red;
+    border-radius: 10px;
+}

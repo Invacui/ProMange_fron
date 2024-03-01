@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.auth_mainbody{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+#auth_sub_box_one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17A2B8;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    font-size: 1vw;
+    color: white;
+    font-weight: 600;
+    word-spacing: 3px;
+}
+#auth_sub_box_one > img{
+    height: 45vh;
+    width: 45vh;
+    
+}
+#auth_sub_box_one >h1{
+    text-align: center;
+    height: 5vh;
+    width: 30vw;
+}
+
+#auth_sub_box_two{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+#auth_sub_box_two > h1{
+    margin-bottom: 25px;
+}
+.authForm_input{
+    
+    padding: 15px 45px;
+    width: 25rem;
+    margin: 10px;
+    border-radius: 8px ;
+    border: 1px solid #82828253;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 25px;
+    background-position-x: 12px;
+}
+#auth_submit {
+    
+    background: #17A2B8;
+    border-radius: 50px  !important;
+    color: white;
+    cursor: pointer;
+}
+.change_auth_type{
+    margin-top: 50px;
+    color: #828282;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.change_auth_type > button{
+    background: transparent;
+    border: 1.5px solid;
+    border-color: #17A2B8;
+    border-radius: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: #17A2B8;
+    margin-top: 20px;
+    padding: 15px 45px;
+    width: 25rem;
+    cursor: pointer;
+}
+.passwordField{
+    position: relative;
+}
+.fa-regular{
+    width:40px;
+     height:40px;
+     position: absolute;
+     right: 20px;
+    margin-top: 25px;
+    cursor: pointer;
+    }
+#auth_sub_box_two form > button:active {
+    background-color: transparent;
+    box-shadow: 0 5px rgba(102, 102, 102, 0.315);
+    transform: translateY(4px);
+  }
+
+  #MyCustomToastId .Toastify__toast-icon {
+    width: 60px;
+    background: #00BF91;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  @media screen and (max-width: 480px) {
+    .auth_mainbody{
+        flex-direction: column;
+        height: 100vh;
+        flex-wrap: wrap;
+    }
+    #auth_sub_box_one > img{
+        width: 15rem;
+        height: 15rem;
+    }
+    #auth_sub_box_one > h1{
+        font-size: 5em;
+        width: auto;
+        height: auto;
+    }
+    #auth_sub_box_one > p{
+        font-size: 3em;
+        padding-bottom: 5px;
+    }
+    #auth_sub_box_two{
+        margin-top: 10px;
+    }
+    #auth_sub_box_two > h1{
+        font-size: large;
+        margin-bottom: 10px;
+    }
+    .authForm_input{
+        padding: 10px 40px;
+        width: 20em;
+        margin: 5px;
+    }
+    .change_auth_type{
+        margin-top: 20px;}
+    .change_auth_type > button{
+        margin-top: 10px;
+        padding: 10px 40px;
+        width: 20em;
+        cursor: pointer;
+    }
+    .fa-regular{
+        width:10px;
+         height:10px;
+         position: absolute;
+         right: 30px;
+        margin-top: 15px;
+        color: #828282;
+        cursor: pointer;
+        }
+  }
+  /*ICNS */
+  #name{
+    background-image: url("../assets/favicons/user.svg");
+  }
+  #email{
+    background-image: url("../assets/favicons/email.svg");
+  }
+  #password{
+    background-image: url("../assets/favicons/lock.svg");
+  }
+  #cpassword{
+    background-image: url("../assets/favicons/lock.svg");
+  }

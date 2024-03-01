@@ -1,0 +1,86 @@
+.Board_main_body{
+    border: 4px solid black;
+    height: 100vh;
+}
+.Board_sub_body{
+    height: fill;
+    position: relative;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+#formatted_date{
+    font-weight: medium;
+    font-size: large;
+    color: grey;
+}
+.Board_sub_body_box{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.filter_data{
+    position: relative;
+    width: 7rem;
+    color: rgb(90, 84, 84);
+}
+.filter_data:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-select{
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+    cursor: pointer;
+
+}
+.dropdown-list{
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear , visibility 0.2s linear;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.dropdown-list button{
+    cursor: pointer;
+    border: none;
+    text-align: start;
+    background-color: transparent;
+    font-weight: bold;
+    width: fill;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 10px;
+}
+.dropdown-list button:hover{
+    background-color: grey;
+}
+#Kanban_Board{
+    display: flex;
+    
+    flex-wrap: nowrap;
+    width: fill; /* Width of the container */
+    height: fill; /* Height of the container */
+    overflow-x: auto; /* Enable horizontal scrollbar */
+    white-space: nowrap;
+    margin-bottom: 0;
+}

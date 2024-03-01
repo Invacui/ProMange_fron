@@ -1,0 +1,38 @@
+.Analytics_main_body{
+    position: relative;
+    padding:2vw ;
+}
+.Analytics_sub_body{
+    display: flex;
+    
+}
+.Analytics_box{
+    margin: 2% 2%;
+    padding: 2vh 0.5vw;
+    background: rgba(249, 252, 255, 1);
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
+    border-radius: 10px;
+}
+.Analytics_sub_box{
+    margin: auto 20px;
+    list-style-type: disc; /* Use disc bullets */
+    font-size: 16px; /* Adjust the font size */
+}
+.Analytics_sub_box li{
+    margin: 20px;
+}
+.Analytics_sub_ul{
+    margin-left: 3vw;
+    list-style: none !important;
+    font-weight: 600;
+}
+.Analytics_sub_ul li::marker{
+color: transparent;
+}
+/* li::marker {  */   /*Fix it=============================>*/
+/*     color: rgba(144, 196, 204, 1);
+    content: '● ';
+    font-size: 1.5em;
+  } */
