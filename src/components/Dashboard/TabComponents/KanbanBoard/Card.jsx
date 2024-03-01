@@ -134,7 +134,7 @@ const Card = ({ task, toggle, setToggle, full_minimized }) => {
         </div>
       </div>
       {EditForm === true && (
-        <Add_task setToggleForm={setEditForm} TaskData={task} setToggle={setToggle} />
+        <Add_task setToggleForm={setEditForm} TaskData={task} setToggle={setToggle} toggle={toggle} />
       )}
       <div>
         {showCustomPopup && (

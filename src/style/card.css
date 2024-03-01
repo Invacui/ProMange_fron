@@ -127,6 +127,7 @@ color: red;
     /* border: 1px springgreen; */
     border: 1px solid grey;
     width: 20rem;
+    max-height: 90vh;
     position: relative;
 }
 .switch_buttons.shared {
@@ -152,4 +153,14 @@ color: red;
 }
 .logo_shared_task img{
     margin-right: 10px;
+}
+.Full_task_min.shared {
+    min-height: fit-content;
+    max-height: 90vh;
+    overflow: scroll;
+}
+.check_list_view.shared {
+    min-height: fit-content;
+    max-height: 90vw;
+    overflow: auto;
 }

@@ -58,7 +58,7 @@ const KanbanBoard = ({time_duration,setTimeDuration}) => {
         ))}
       </div>
       {toggleForm === true && (
-        <Add_task setToggleForm={setToggleForm} setToggle={setToggle} />
+        <Add_task setToggleForm={setToggleForm} setToggle={setToggle} toggle={toggle} />
       )}
     </div>
   );

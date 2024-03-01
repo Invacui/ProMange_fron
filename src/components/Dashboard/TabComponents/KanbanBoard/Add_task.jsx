@@ -8,11 +8,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import { SaveTask } from '../../../../services/DataHandler';
 import { useEffect } from 'react';
 import { UpdateTaskData } from '../../../../services/KanbanDataHandler';
-const Add_task = ({setToggleForm,TaskData,setToggle}) => {
+const Add_task = ({setToggleForm,TaskData,setToggle,toggle}) => {
 
     
     const [title, setTitle] = useState("");
-    const [priority, setPriority] = useState("high");
+    const [priority, setPriority] = useState("High Priority");
     const [checklist, setChecklist] = useState([]);
     const [startDate, setStartDate] = useState(null);
     const [dueDate, setDueDate] = useState('');
@@ -21,7 +21,7 @@ const Add_task = ({setToggleForm,TaskData,setToggle}) => {
     useEffect(() => {
       if (TaskData) {
         setTitle(TaskData.title || "");
-        setPriority(TaskData.priority || "high");
+        setPriority(TaskData.priority || "High Priority");
         setChecklist(TaskData.checklist || []);
         setDueDate(format(new Date(TaskData.dueDate), 'MM/dd/yyyy')  || null);
         setStatus(TaskData.status || "To Do");
@@ -62,11 +62,11 @@ const Add_task = ({setToggleForm,TaskData,setToggle}) => {
       const handleReset = () =>{
         console.log("Reset Hit")
         setTitle("");
-        setPriority("high");
+        setPriority("High Priority");
         setChecklist([]);
         setDueDate(null);
         setToggleForm(false);
-        setToggle();
+        setToggle(!toggle);
       }
       const handleSubmit = async (event) => {
         event.preventDefault();
@@ -114,9 +114,9 @@ const Add_task = ({setToggleForm,TaskData,setToggle}) => {
                   value={priority} 
                   
               >
-                <button type='button' className='high' value="High Priority" onClick={(e) => setPriority(e.target.value)} >🔴 High Priority</button>
-                <button  type='button' className='med'value="Medium Priority" onClick={(e) => setPriority(e.target.value)}>🔵 Modrate Priority</button>
-                <button type='button' className='low'value="Low Priority" onClick={(e) => setPriority(e.target.value)}>🟢 Low Priority</button>
+                <button type='button' className={`Priority ${priority === 'High Priority' ? 'selected' : ''}`} value="High Priority" onClick={(e) => setPriority(e.target.value)} >🔴 High Priority</button>
+                <button  type='button' className={`Priority ${priority === 'Medium Priority' ? 'selected' : ''}`} value="Medium Priority" onClick={(e) => setPriority(e.target.value)}>🔵 Modrate Priority</button>
+                <button type='button' className={`Priority ${priority === 'Low Priority' ? 'selected' : ''}`}value="Low Priority" onClick={(e) => setPriority(e.target.value)}>🟢 Low Priority</button>
               </span>
           </div>
           

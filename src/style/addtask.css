@@ -175,4 +175,7 @@ flex: 0.75;
     border: 1px solid rgba(23, 162, 184, 1);
     background-color: rgba(23, 162, 184, 1);
 }
-
+button.Priority.selected{
+    background: #9e9898b5;
+    color: white;
+}
